@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>child</name>
+  <version>0.0.0</version>
+  <description>The child package</description>
+  <maintainer email="eisoku@todo.todo">eisoku</maintainer>
+  <license>TODO</license>
+  <depend>parent</depend>
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
