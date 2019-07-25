@@ -1,0 +1,12 @@
+language: minimal
+services:
+  - docker
+
+matrix:
+  - ROS_DISTRO='kinetic'
+  - ROS_DISTRO='lunar'
+  - ROS_DISTRO='melodic'
+
+script:
+  - docker pull ros:${ROS_DISTRO}-ros-core
+  - docker run --rm -it -v .:/root/catkin_ws/src/ -w /root/catkin_ws /bin/bash -c "catkin_make_isolated"
